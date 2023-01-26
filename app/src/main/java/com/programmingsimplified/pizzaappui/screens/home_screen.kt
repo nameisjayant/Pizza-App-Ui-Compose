@@ -148,7 +148,7 @@ fun MenuItems(
                     fontWeight = FontWeight.W600,
                     color = if (selected) Color.White else DarkBlackColor
                 ),
-                modifier = Modifier.padding(horizontal = 15.dp, vertical = 5.dp)
+                modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp)
             )
         }
     }
@@ -157,5 +157,5 @@ fun MenuItems(
 
 @Composable
 fun ExtendedActionButton() {
-    
+
 }
