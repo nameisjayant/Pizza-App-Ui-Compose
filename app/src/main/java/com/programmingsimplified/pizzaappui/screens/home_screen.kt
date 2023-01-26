@@ -77,7 +77,7 @@ fun HomeScreen() {
                             CommonIconFromDrawable(icon = R.drawable.menu)
                             SpacerWidth()
                             Text(
-                                text = "JKM Resto",
+                                text = stringResource(R.string.username),
                                 style = TextStyle(
                                     fontSize = 19.sp,
                                     fontWeight = FontWeight.W600,

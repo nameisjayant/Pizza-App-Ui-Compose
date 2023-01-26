@@ -28,7 +28,7 @@ fun CommonIconFromDrawable(
     IconButton(onClick = { }, modifier = modifier.size(28.dp)) {
         Icon(
             painter = painterResource(id = icon), contentDescription = "",
-            tint = Color.Unspecified
+            tint = tint
         )
     }
 }
@@ -44,7 +44,7 @@ fun CommonIconFromVector(
     IconButton(onClick = { }, modifier = modifier.size(28.dp)) {
         Icon(
             imageVector = icon, contentDescription = "",
-            tint = Color.Unspecified
+            tint = tint
         )
     }
 }

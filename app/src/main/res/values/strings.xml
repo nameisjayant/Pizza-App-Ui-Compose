@@ -2,4 +2,5 @@
     <string name="app_name">Pizza App UI</string>
     <string name="add">Add</string>
     <string name="price">£60.40</string>
+    <string name="username">JKM Resto</string>
 </resources>
