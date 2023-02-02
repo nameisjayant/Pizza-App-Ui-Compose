@@ -59,18 +59,14 @@ fun HomeScreen() {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-
+                        .background(RedColor)
                 ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.bg), contentDescription = "",
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.height(70.dp).fillMaxWidth()
-                    )
+
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 20.dp)
-                            .align(Alignment.Center),
+                            .padding(horizontal = 20.dp, vertical = 20.dp)
+                            .align(Center),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         Row {
@@ -103,8 +99,8 @@ fun HomeScreen() {
                     }
                 }
 
-                LazyVerticalGrid(columns = GridCells.Fixed(2)){
-                    items(pizzaList){
+                LazyVerticalGrid(columns = GridCells.Fixed(2)) {
+                    items(pizzaList) {
                         ShowPizza(pizza = it)
                     }
                 }
@@ -124,25 +120,24 @@ fun MenuItems(
     onValueUpdate: (String) -> Unit
 ) {
 
-    Card(
+    TextButton(
+        onClick = { onValueUpdate(menuName) },
+        elevation = ButtonDefaults.elevation(0.dp),
+        colors = ButtonDefaults.buttonColors(
+            backgroundColor = if (selected) YellowColor else Color.Transparent
+        ),
         shape = RoundedCornerShape(200.dp),
-        elevation = 0.dp,
-        backgroundColor = if (selected) YellowColor else Color.Transparent,
         modifier = modifier
             .padding(vertical = 15.dp, horizontal = 10.dp)
     ) {
-        Box(contentAlignment = Alignment.Center, modifier = Modifier.clickable {
-            onValueUpdate(menuName)
-        }) {
-            Text(
-                text = menuName, style = TextStyle(
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.W600,
-                    color = if (selected) Color.White else DarkBlackColor
-                ),
-                modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp)
-            )
-        }
+        Text(
+            text = menuName,
+            style = TextStyle(
+                fontSize = 14.sp,
+                fontWeight = FontWeight.W600,
+                color = if (selected) Color.White else DarkBlackColor
+            ),
+        )
     }
 
 }
