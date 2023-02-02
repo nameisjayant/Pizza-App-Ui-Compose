@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -222,10 +223,11 @@ fun ShowPizza(
 @Composable
 fun ExtendedActionButton() {
 
-    Card(
-        shape = RoundedCornerShape(27.dp),
-        backgroundColor = DarkBlackColor,
-        modifier = Modifier.height(48.dp)
+    Box(
+        modifier = Modifier
+            .height(48.dp)
+            .clip(RoundedCornerShape(27.dp))
+            .background(DarkBlackColor)
     ) {
 
         Row {
