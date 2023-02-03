@@ -1,6 +1,8 @@
 package com.programmingsimplified.pizzaappui
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,7 +19,6 @@ import com.programmingsimplified.pizzaappui.ui.theme.PizzaAppUITheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             PizzaAppUITheme {
                 Surface(

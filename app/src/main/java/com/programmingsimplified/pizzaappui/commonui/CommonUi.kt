@@ -23,9 +23,10 @@ import androidx.compose.ui.unit.dp
 fun CommonIconFromDrawable(
     @DrawableRes icon: Int,
     tint: Color = Color.Unspecified,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick:()->Unit={}
 ) {
-    IconButton(onClick = { }, modifier = modifier.size(28.dp)) {
+    IconButton(onClick = {onClick() }, modifier = modifier.size(28.dp)) {
         Icon(
             painter = painterResource(id = icon), contentDescription = "",
             tint = tint
